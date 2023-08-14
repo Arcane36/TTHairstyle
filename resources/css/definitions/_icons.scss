@@ -1,0 +1,31 @@
+@mixin iconSettings($url, $color: unset, $width: 32, $height: 32) {
+    &::before {
+        content: url($url);
+        display: inline-block;
+        width: $width + px;
+        height: $height + px;
+        background-color: $color;
+        mask: url($url) no-repeat 0 0;
+        -webkit-mask: url($url) no-repeat 0 0;
+        vertical-align: middle;
+        margin-top: -2px;
+    }
+}
+
+.icon {
+    display: inline-block;
+    transition: transform 0.3s linear;    
+    line-height: 0;
+
+    &:hover, &:active, &:focus {
+        transform: rotate(360deg);     
+    }
+
+    &--black {
+        background-color: var(--color-black);
+    }
+
+    &--facebook { @include iconSettings("/img/facebook.svg"); }
+    &--instagram { @include iconSettings("/img/instagram.svg"); }
+    &--whatsapp { @include iconSettings("/img/whatsapp.svg"); }
+}

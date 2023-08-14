@@ -1,0 +1,28 @@
+/*
+* Responzivní breakpointy
+*/
+
+$screen-xs: 370px;
+$screen-sm: 480px;
+$screen-md: 768px;
+$screen-lg: 1024px;
+$screen-xl: 1440px;
+$screen-hg: 1600px;
+
+// Definice Media queries
+// Využití formou @include media-xs {}
+
+@mixin media-xs { @media all and (min-width: $screen-xs) { @content; } }
+@mixin media-sm { @media all and (min-width: $screen-sm) { @content; } }
+@mixin media-md { @media all and (min-width: $screen-md) { @content; } }
+@mixin media-lg { @media all and (min-width: $screen-lg) { @content; } }
+@mixin media-xl { @media all and (min-width: $screen-xl) { @content; } }
+@mixin media-hg { @media all and (min-width: $screen-hg) { @content; } }
+
+
+// Definice Container queries
+@mixin container($size) { @container (min-width: #{$size}) { @content; } }
+
+.container-type {
+    container-type: inline-size;
+}

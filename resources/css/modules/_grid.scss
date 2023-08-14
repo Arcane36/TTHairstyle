@@ -1,0 +1,176 @@
+$gaps: 0, 8, 16, 24, 32, 40, 48, 56, 72, 96, 100, 104, 144, 212;
+
+.grid {
+	display: flex;
+	flex-wrap: wrap;
+	
+	> [class*="grid__"] {
+		flex-grow: 0;
+		flex-shrink: 0;
+		flex-basis: auto;
+		box-sizing: border-box;
+	}
+	
+	&--container-type { 
+		> [class*="grid__"] {
+			container-type: inline-size;
+		}
+	}
+	
+	&__wrap {
+		padding: 1px 0;
+		// overflow: hidden;
+		
+		// @include media-lg { overflow: visible; }
+		
+		&:before,
+		&:after {
+			display: block;
+			content: " ";
+			height: 1px;
+			overflow: hidden;
+		}
+		&:before {
+			margin: -2px 0 0;
+		}
+		&:after {
+			margin: 0 0 -2px;
+		}
+	}
+
+	&__height {
+		height: 100%;
+	}
+}
+
+@mixin _grid-align($bp: '') {
+	.grid--#{$bp}left		{ justify-content: flex-start; }
+	.grid--#{$bp}center 	{ justify-content: center; }
+	.grid--#{$bp}right		{ justify-content: flex-end; }
+	.grid--#{$bp}justify	{ justify-content: space-between; }
+	
+	.grid--#{$bp}top		{ align-items: flex-start; }
+	.grid--#{$bp}middle 	{ align-items: center; }
+	.grid--#{$bp}bottom 	{ align-items: flex-end; }
+	.grid--#{$bp}stretch	{ align-items: stretch; }
+}
+
+@include _grid-align();
+@include media-xs { @include _grid-align(xs-); }
+@include media-sm { @include _grid-align(sm-); }
+@include media-md { @include _grid-align(md-); }
+@include media-lg { @include _grid-align(lg-); }
+@include media-hg { @include _grid-align(hg-); }
+@include media-xl { @include _grid-align(xl-); }
+
+@mixin _grid-direction($bp: '') {
+	.grid--#{$bp}row 		{ flex-direction: row; }
+	.grid--#{$bp}reverse	{ flex-direction: row-reverse; }
+	.grid--#{$bp}column-reverse	{ flex-direction: column-reverse; }
+}
+
+@include _grid-direction();
+@include media-xs { @include _grid-direction(xs-); }
+@include media-sm { @include _grid-direction(sm-); }
+@include media-md { @include _grid-direction(md-); }
+@include media-lg { @include _grid-direction(lg-); }
+@include media-hg { @include _grid-direction(hg-); }
+@include media-xl { @include _grid-direction(xl-); }
+
+@mixin _grid-order($bp: '') {
+	.grid__#{$bp}order-0 		{ order: 0; }
+	.grid__#{$bp}order-1 		{ order: 1; }
+}
+
+@include _grid-order();
+@include media-xs { @include _grid-order(xs-); }
+@include media-sm { @include _grid-order(sm-); }
+@include media-md { @include _grid-order(md-); }
+@include media-lg { @include _grid-order(lg-); }
+@include media-hg { @include _grid-order(hg-); }
+@include media-xl { @include _grid-order(xl-); }
+
+@mixin _grid-spacing($spacing, $row: false, $col: false) {
+	@if $row == true {
+		margin-top: - calc($spacing / 2) + px;
+		margin-bottom: - calc($spacing / 2) + px;
+		
+		> [class*="grid__"] {
+			padding-top: calc($spacing / 2) + px;
+			padding-bottom: calc($spacing / 2) + px;
+		}
+	} @else if $col == true {
+		margin-left: - calc($spacing / 2) + px;
+		margin-right: - calc($spacing / 2) + px;
+		
+		> [class*="grid__"] {
+			padding-left: calc($spacing / 2) + px;
+			padding-right: calc($spacing / 2) + px;
+		}
+	} @else {
+		margin: - calc($spacing / 2) + px;
+		
+		> [class*="grid__"] {
+			padding: calc($spacing / 2) + px;
+		}
+	}
+}
+
+@mixin _grid-spaces($bp: '') {
+	@each $g in $gaps {
+		.grid--#{$bp}space-#{$g} { @include _grid-spacing($g); }	
+		.grid--#{$bp}space-row-#{$g} { @include _grid-spacing($g, true); }	
+		.grid--#{$bp}space-col-#{$g} { @include _grid-spacing($g, false, true); }	
+	}
+}
+
+@include _grid-spaces();
+@include media-xs { @include _grid-spaces(xs-); }
+@include media-sm { @include _grid-spaces(sm-); }
+@include media-md { @include _grid-spaces(md-); }
+@include media-lg { @include _grid-spaces(lg-); }
+@include media-hg { @include _grid-spaces(hg-); }
+@include media-xl { @include _grid-spaces(xl-); }
+
+@mixin _grid-sizes($base: 24, $bp: '', $count: $base) {
+	@if $count > 0 {
+		.grid__#{$bp}#{$count}-#{$base} {
+			display: block;
+			width: floor($count / $base * 100000) / 1000 + 0%;
+		}
+	 
+		@include _grid-sizes($base, $bp, $count - 1);
+	}
+}
+
+$all-col-sizes: 1, 2, 3, 4, 5, 6, 7, 8, 24;
+@mixin _grid-all-sizes($bp: '') {
+	
+	@each $col in $all-col-sizes {
+		@include _grid-sizes($col, $bp);	
+	}
+	
+	.grid__#{$bp}auto {
+		width: auto;
+		max-width: 100%;
+	}
+	
+	.grid__#{$bp}hidden { display: none; }
+	
+	.grid__#{$bp}justify-col { 
+		display: flex; 
+		flex-direction: column; 
+		justify-content: space-between; 
+	}
+	
+	.grid__#{$bp}wrap--visible { overflow: visible; }
+	.grid__#{$bp}wrap--overflow-hidden { overflow: hidden; }
+}
+
+@include _grid-all-sizes();
+@include media-xs { @include _grid-all-sizes(xs-); }
+@include media-sm { @include _grid-all-sizes(sm-); }
+@include media-md { @include _grid-all-sizes(md-); }
+@include media-lg { @include _grid-all-sizes(lg-); }
+@include media-hg { @include _grid-all-sizes(hg-); }
+@include media-xl { @include _grid-all-sizes(xl-); }

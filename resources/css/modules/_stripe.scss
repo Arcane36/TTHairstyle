@@ -1,0 +1,41 @@
+$spacings: (0, 8, 16, 24, 32, 40, 48, 56, 64, 72, 80);
+
+.stripe {
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 100%;
+    padding-top: 2.6rem;
+    padding-bottom: 2.6rem;
+    background: linear-gradient(0deg, rgba(233, 233, 233,1) 0%, rgba(245,245,247,1) 100%);
+
+    @include media-lg {
+        padding-top: 4.8rem;
+        padding-bottom: 4.8rem;
+    }
+}
+
+@mixin _stripe-variants($bp: '') {
+	@each $val in $spacings {
+		.stripe--#{$bp}#{$val} {
+			padding-top: #{$val}px;
+			padding-bottom: #{$val}px;
+		}
+		.stripe--#{$bp}top-#{$val} {
+			padding-top: #{$val}px;
+		}
+		.stripe--#{$bp}bottom-#{$val} {
+			padding-bottom: #{$val}px;
+		}
+	}
+}
+ 
+@include _stripe-variants();
+@include media-sm { @include _stripe-variants(sm-); }
+@include media-md { @include _stripe-variants(md-); }
+@include media-lg { @include _stripe-variants(lg-); }
+@include media-hg { @include _stripe-variants(hg-); }
+@include media-xl { @include _stripe-variants(xl-); }

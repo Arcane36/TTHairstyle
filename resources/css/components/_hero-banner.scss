@@ -1,0 +1,20 @@
+.hero-banner {
+    display: flex;
+    align-items: center;
+    padding: 5rem 3.2rem;
+    min-height: 30rem;
+    
+    @include media-sm { min-height: 40rem; }
+    @include media-md { min-height: 50rem; }
+    @include media-lg { min-height: 80rem; }
+    
+    &__wrapper {
+        background-size: cover;
+        background-image: url("/img/final.webp");
+    }
+
+    &__text {
+        color: var(--color-white);
+        @extend .typo--h1;
+    }
+}

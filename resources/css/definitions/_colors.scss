@@ -1,0 +1,39 @@
+// --- definice palety barev ---
+
+// Výčet barev, se kterými počítá styleguide. Názvy proměnných mají prefix color a jinak jsou
+// jednoslovné (bez pomlčky uvnitř). Názvy odvozujeme z pokud možno standardních zažitých
+// označení - viz třeba https://www.color-blindness.com/color-name-hue/
+
+// Pro texty a pozadí se upřednostňuje použití funkčních
+// označení barev - viz dále.
+
+//Primary brand colors
+:root {
+	--color-gold:			#d0ac3d;
+	--color-green:			#132523;
+	
+	--color-black:			#000105;
+	--color-white:			#f5f5f7;
+	
+	// - Pozadí -
+	--bgr-black: 			var(--color-black);
+	--bgr-green: 			var(--color-green);
+	--bgr-white: 			var(--color-white);
+	--bgr-gold: 			var(--color-gold);
+	
+}
+
+.color {
+	&--black { color: var(--color-black); }
+	&--green { color: var(--color-green); }
+	&--white { color: var(--color-white); }
+	&--gold { color: var(--color-gold); }
+	
+}
+
+.bgr {
+	&--black { background-color: var(--bgr-black); }
+	&--gold { background-color: var(--bgr-gold); }
+	&--green { background-color: var(--bgr-green); }
+	&--white { background-color: var(--bgr-white); }
+}

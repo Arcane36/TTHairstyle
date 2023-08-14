@@ -1,0 +1,47 @@
+.accordion {
+
+    &__toggle {
+        background-color: #eee;
+        color: var(--color-green);
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        border-radius: 4px;
+        border: 1px solid rgba(19, 37, 35, 0.1);
+        transition: background-color 0.3s linear, color 0.3s linear;
+        @extend .typo--b2;
+        
+        &::after {
+            content: '\002B';
+            color:  var(--color-green);
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+        
+        &--active, &:hover {
+            background-color: var(--color-green);
+            color: var(--color-gold);
+            
+            &::after {
+                color: var(--color-gold);
+            }
+        }    
+    
+        &--active::after { content: "\2212"; }
+    }
+
+    &__content {
+        background-color: white;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+        
+        p {
+            padding: 2.4rem;
+        }
+    }
+}

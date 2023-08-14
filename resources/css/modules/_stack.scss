@@ -1,0 +1,25 @@
+$spacings: (0, 4, 8, 10, 16, 20, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96, 104, 112, 120, 240, 248);
+
+//určíme si nějakou default hodnotu
+.stack + .stack { margin-top: 2.4rem; }
+
+@mixin _stack-variants($bp: '') {
+	.stack {
+		@each $val in $spacings {
+			& + &--#{$bp}#{$val}, &--#{$bp}#{$val} + & {
+				margin-top: #{calc($val / 10)}rem;
+			}
+			
+			& + &--#{$bp}top-#{$val}, &--#{$bp}bottom-#{$val} + & {
+				margin-top: #{calc($val / 10)}rem;
+			}
+		}
+	}
+}
+
+@include _stack-variants();
+@include media-sm { @include _stack-variants(sm-); }
+@include media-md { @include _stack-variants(md-); }
+@include media-lg { @include _stack-variants(lg-); }
+@include media-hg { @include _stack-variants(hg-); }
+@include media-xl { @include _stack-variants(xl-); }

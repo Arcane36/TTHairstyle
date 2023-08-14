@@ -1,0 +1,7 @@
+.shadow {
+    box-shadow: 0px 0px 20px 0px var(--color-green);
+
+    &--two-layered {
+        box-shadow: 20px 20px 60px #d0d0d2, -20px -20px 60px #ffffff;
+    }
+}

@@ -1,0 +1,129 @@
+.typo--h1, h1 {
+    font-size: 2.88rem;
+    line-height: 1.27;
+    font-weight: bold;
+
+    @include media-md {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+
+    @include media-lg {
+        font-size: 6.13rem;
+        line-height: 1.36;
+    }
+}
+
+.typo--h2, h2 {
+    font-size: 2.5rem;
+    line-height: 1.25;
+    font-weight: bold;
+
+    @include media-md {
+        font-size: 2.288rem;
+        line-height: 1.26;
+    }
+
+    @include media-lg {
+        font-size: 4.88rem;
+        line-height: 1.27;
+    }
+}
+
+.typo--h3, h3 {
+    font-size: 2.5rem;
+    line-height: 1.23;
+    font-weight: bold;
+
+    @include media-md {
+        font-size: 2rem;
+        line-height: 1.26;
+    }
+
+    @include media-lg {
+        font-size: 3.2rem;
+        line-height: 1.27;
+    }
+}
+
+.typo--b1 {
+    font-size: 2rem;
+    line-height: 1.4;
+
+    @include media-lg {
+        font-size: 2.4rem;
+    }
+}
+.typo--b2 {
+    font-size: 1.6rem;
+    line-height: 1.4;
+
+    @include media-lg {
+        font-size: 2rem;
+    }
+}
+
+.typo--b3 {
+    font-size: 1.4rem;
+    line-height: 1.4;
+
+    @include media-lg {
+        font-size: 1.6rem;
+    }
+}
+
+.typo--b4 {
+    font-size: 1.4rem;
+    line-height: 1.4;
+}
+
+strong, b, .typo--bold {
+    font-weight: 700;
+}
+
+cite {
+    display: block;
+    position: relative;
+
+    &::before, &::after {
+        position: absolute;        
+        font-size: 15rem;   
+        line-height: 0; 
+        opacity: 50%;
+        color: var(--color-green)
+    }
+    
+    &::before {
+        content: "„";
+        bottom: 15px;
+        left: 0;
+        transform: translateX(-50%);
+    }
+    
+    &::after {
+        content: "“";
+        top: 15px;
+        right: 0;
+        transform: translateX(50%);
+    }
+}
+
+.typo--center {
+    text-align: center;
+}
+
+.typo--right {
+    text-align: right;
+}
+
+.typo--left {
+    text-align: left;
+}
+
+p + p {
+    margin-top: 0.8rem;
+
+    @include media-lg {
+        margin-top: 1.2rem;
+    }
+}
