@@ -19,19 +19,17 @@
                         <h3>Tereza Tyrpeklová</h3>
                         <br />
                         <p>
-                            Ahoj, jmenuji se Terka a práci v kadeřnictví se
-                            věnuji již <strong>více než sedmnáct let.</strong>
+                            Ahoj, jmenuji se Terka a kadeřnictví se věnuji přes 20 let. Víc než rok jsem pracovala v zahraničí, dnes mě najdete na Letné v Praze, kde si plním svůj sen – tvořit účesy, které nejsou jen trendy, ale hlavně <strong>osobité, přirozené a přesně vám na míru.</strong>         
                         </p>
                         <p>
-                            Tři roky jsem pracovala v zahraničí, ale dnes mě
-                            naleznete v Praze na Letné. Neustále sleduji
-                            nejnovější trendy.
+                            Ke každému klientovi přistupuji <strong>individuálně a s respektem</strong>. Nejde mi o to slepě kopírovat účes z Instagramu, ale o to, <strong>najít styl, který vám opravdu sedne</strong> – podle typu vlasů, osobnosti i toho, v jaké fázi života se právě nacházíte. Chci, abyste odcházeli nejen s krásnými vlasy, ale hlavně <strong>s dobrým pocitem</strong>.
                         </p>
                         <p class="stack">
-                            Srdcem jsem gamerka, takže mimo práci buď pařím nebo
-                            mě najdete ve fitku :)
+                            Když zrovna nestříhám, najdete mě ve fitku nebo u počítače – jsem taky vášnivá gamerka ??. Ale i v tom vidím paralelu s kadeřnictvím – <strong>balanc mezi technikou a kreativitou.</strong>
                         </p>
-
+                        <p class="stack">
+                            Těším se na vás!
+                        </p>
                     </cite>
                     <div class="stack typo--right">
                         <a href="#kontakt" class="button" aria-label="Více informací o kontaktech"> Kontaktovat </a>
@@ -631,7 +629,7 @@
             style="border-radius: 10px"
         >
             <iframe
-                src="https://www.google.com/maps/embed/v1/place?q=Kamenická+31,+Praha+7-Holešovice,+Česko&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+                src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJa5qJkMWUC0cRTwD8aBtDU1E&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
                 width="1440"
                 height="400"
                 style="border: 0; border-radius: 4px"
