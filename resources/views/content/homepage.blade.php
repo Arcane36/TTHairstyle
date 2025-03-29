@@ -13,7 +13,7 @@
                 </div>
                 <div class="grid__1-1 grid__lg-1-2">
                     <cite
-                        class="typo--b2 stack margin--40 wow animate__animated animate__fadeIn"
+                        class="typo--b2 typo--balance stack margin--40 wow animate__animated animate__fadeIn"
                         data-wow-delay="0.3s"
                     >
                         <h3>Tereza Tyrpeklová</h3>
@@ -25,7 +25,7 @@
                             Ke každému klientovi přistupuji <strong>individuálně a s respektem</strong>. Nejde mi o to slepě kopírovat účes z Instagramu, ale o to, <strong>najít styl, který vám opravdu sedne</strong> – podle typu vlasů, osobnosti i toho, v jaké fázi života se právě nacházíte. Chci, abyste odcházeli nejen s krásnými vlasy, ale hlavně <strong>s dobrým pocitem</strong>.
                         </p>
                         <p class="stack">
-                            Když zrovna nestříhám, najdete mě ve fitku nebo u počítače – jsem taky vášnivá gamerka ??. Ale i v tom vidím paralelu s kadeřnictvím – <strong>balanc mezi technikou a kreativitou.</strong>
+                            Když zrovna nestříhám, najdete mě ve fitku nebo u počítače – jsem taky vášnivá gamerka 🎮. Ale i v tom vidím paralelu s kadeřnictvím – <strong>balanc mezi technikou a kreativitou.</strong>
                         </p>
                         <p class="stack">
                             Těším se na vás!

@@ -9,10 +9,22 @@
 
         <meta name="description" content="Hledáte kvalitní kadeřnictví s příjemnou, ale zároveň velice zkušenou obsluhou? Kadeřnictví TT Hairstyle v Praze 7 je tím perfektním místem pro Vás. Dopřejte sobě a svým vlasům to nejlepší.">
         <meta name="og:description" content="Hledáte kvalitní kadeřnictví s příjemnou, ale zároveň velice zkušenou obsluhou? Kadeřnictví TT Hairstyle v Praze 7 je tím perfektním místem pro Vás. Dopřejte sobě a svým vlasům to nejlepší.">
+        <meta name="keywords" content="kadeřnictví, kadeřnictví Praha 7, TT Hairstyle, kadeřnictví Holešovice, kadeřnictví Praha, kadeřnictví Holešovice, kadeřnictví Praha 7 Holešovice, kadeřnictví Holešovice Praha 7, kadeřnictví Holešovice Praha
+        7, kadeřnictví Holešovice Praha, tereza, tyrpeklová, terka, kadeřnice, kadeřnice Praha 7, kadeřnice Holešovice, kadeřnice Praha, kadeřnice Holešovice, kadeřnice Praha 7 Holešovice, kadeřnice Holešovice Praha 7, kadeřnice Holešovice Praha">
         <meta property="og:title" content="TT Hairstyle">
         <meta property="og:type" content="website">
+        <meta property="og:site_name" content="tthairstyle.cz">
         <meta property="og:url" content="https://www.tthairstyle.cz/">
+        <meta property="og:image" content="{{URL::asset('img/logo.svg') }}">
 
+        <meta name="twitter:card" content="summary_large_image">
+
+        <meta name="robots" content="index,follow">
+        <link rel="canonical" href="https://www.tthairstyle.cz">
+
+        <link rel="apple-touch-icon" sizes="180x180" href="{{URL::asset('img/logo.svg') }}">
+        <link rel="mask-icon" href="{{URL::asset('img/logo.svg') }}" color="#000000">
+        <link rel="icon" type="image/svg+xml"  href="{{URL::asset('img/logo.svg') }}">
         <link rel="shortcut icon" href="{{URL::asset('img/logo.svg') }}" type="image/x-icon">
 
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 

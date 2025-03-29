@@ -308,6 +308,10 @@ cite::after {
   text-align: left;
 }
 
+.typo--balance {
+  text-wrap-style: balance;
+}
+
 p + p {
   margin-top: 0.8rem;
 }
